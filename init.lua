@@ -76,6 +76,8 @@ require('lazy').setup({
     },
   },
 
+  {require("plugins.tailwind")},
+
   {
     'navarasu/onedark.nvim',
     priority = 1000,
@@ -83,14 +85,13 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
-
   { "lukas-reineke/indent-blankline.nvim", opts = {} },
 
   {
     'nvim-lualine/lualine.nvim',
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -402,8 +403,7 @@ cmp.setup {
 }
 
 -- [[ mpu69 configuration]]
-require("plugins.tailwind")
-
+require("plugins.theme")
 -- ibl module funker ikke akk nå 
 -- require("plugins.indent")
 
