@@ -26,18 +26,12 @@ vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
 -- Shortcuts for go
 vim.api.nvim_set_keymap('n', '<leader>gr', ':GoRun<Enter>', { noremap = true })
 
--- Legg til caps i stedet for esc for å gå ut av insert eller visual mode
--- function Remap_caps_lock()
-  -- local keycode = 20
-  -- local active = vim.fn.getchar(keycode) == 1
-  -- if active then
-    -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
-  -- end
--- end
+-- Vertical navigation
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
--- vim.api.nvim_set_keymap('i', '<CapsLock>', [[<Cmd>lua Remap_caps_lock()<CR>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-
--- vim.api.nvim_set_keymap('x', '<CapsLock>', [[<Cmd>lua Remap_caps_lock()<CR>]], { noremap = true, silent = true })
+-- Formatting (prettier)
+vim.api.nvim_set_keymap('n', '<leader>sf', ':Neoformat prettier<Enter>', { noremap = true, silent = true })
 
 

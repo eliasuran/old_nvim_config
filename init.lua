@@ -78,6 +78,8 @@ require('lazy').setup({
 
   {require("plugins.tailwind")},
 
+  {"sbdchd/neoformat"},
+
   {
     'navarasu/onedark.nvim',
     priority = 1000,
@@ -85,7 +87,8 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
-  { "lukas-reineke/indent-blankline.nvim", opts = {} },
+
+  { "lukas-reineke/indent-blankline.nvim", main="ibl", opts = {} },
 
   {
     'nvim-lualine/lualine.nvim',
@@ -404,8 +407,8 @@ cmp.setup {
 
 -- [[ mpu69 configuration]]
 require("plugins.theme")
--- ibl module funker ikke akk nå 
--- require("plugins.indent")
+
+require("plugins.indent")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

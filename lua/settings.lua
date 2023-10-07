@@ -13,3 +13,5 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.termguicolors = true
+
+vim.g.neoformat_try_node_exe = 1
