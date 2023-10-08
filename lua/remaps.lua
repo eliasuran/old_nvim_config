@@ -32,6 +32,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Formatting (prettier)
-vim.api.nvim_set_keymap('n', '<leader>sf', ':Neoformat prettier<Enter>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fs', ':Neoformat prettier<Enter>', { noremap = true, silent = true, desc = '[F]ormat [S]ode' })
 
+vim.cmd('autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx :Neoformat prettier')
 

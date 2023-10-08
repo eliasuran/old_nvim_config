@@ -109,6 +109,15 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use main branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  },
+
+  {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = {
