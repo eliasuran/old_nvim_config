@@ -24,7 +24,8 @@ vim.api.nvim_set_keymap('i', '`', '``<Esc>ha', { noremap = true })
 vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
 
 -- Shortcuts for go
-vim.api.nvim_set_keymap('n', '<leader>gr', ':GoRun<Enter>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>gr', ':GoRun<Enter>', { noremap = true, silent = true, desc = 'gorun current file' })
+vim.api.nvim_set_keymap('n', '<leader>gm', ':GoFmt<Enter>', { noremap = true, silent = true, desc = 'gofmt current file' })
 
 -- Vertical navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
