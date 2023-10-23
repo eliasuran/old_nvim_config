@@ -37,3 +37,5 @@ vim.api.nvim_set_keymap('n', '<leader>fs', ':Neoformat prettier<Enter>', { norem
 
 vim.cmd('autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx :Neoformat prettier')
 
+-- Yank all
+vim.api.nvim_set_keymap("n", "<leader>fe", "ggyG", { noremap = true, silent = true, desc = "Yank everything" })

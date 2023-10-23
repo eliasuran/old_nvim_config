@@ -80,13 +80,7 @@ require('lazy').setup({
 
   {"sbdchd/neoformat"},
 
-  {
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   { "lukas-reineke/indent-blankline.nvim", main="ibl", opts = {} },
 
@@ -168,6 +162,8 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
 
 vim.o.termguicolors = true
+
+vim.cmd.colorscheme "catppuccin"
 
 -- [[ Basic Keymaps ]]
 
